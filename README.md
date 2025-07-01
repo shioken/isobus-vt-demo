@@ -84,11 +84,7 @@ Complete ISO 11783-6 VT object demonstration:
 ![VT Objects Web Menu](./demo/screenshots/vt_objects_web_menu.png)
 *VT Objects Library Web demo main menu - showcasing all 29 ISO 11783-6 object types*
 
-| Data Mask Interface | Soft Key Navigation | Object Properties |
-|:-------------------:|:-------------------:|:-----------------:|
-| ![Data Mask](./demo/screenshots/data-mask.png) | ![Soft Keys](./demo/screenshots/soft-keys.png) | ![Properties](./demo/screenshots/properties.png) |
-
-*Professional-grade VT interfaces ready for production use*
+*Professional-grade VT interfaces ready for production use - try the interactive demos above*
 
 ## 🏗️ Architecture
 
