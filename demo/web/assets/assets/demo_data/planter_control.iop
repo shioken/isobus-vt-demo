@@ -1,0 +1,603 @@
+# ISO 11783-6 Object Pool for Planter Control Interface Demo
+# This demonstrates implement control functionality
+
+OBJECT_POOL_VERSION: 1.0
+DESIGNER_VERSION: 1.0
+LANGUAGE: en
+
+# Working Set (Root Container)
+WORKING_SET:
+  object_id: 0
+  active_mask: 2000
+  background_color: 0  # Black
+  selectable: false
+  language_mask:
+    - language: "en"
+      mask_id: 2000
+
+# Planter Control Data Mask
+DATA_MASK:
+  object_id: 2000
+  background_color: 0  # Black
+  soft_key_mask: 3000
+  children:
+    - object_id: 2001  # Planter Status Header
+    - object_id: 2002  # Section Control Grid
+    - object_id: 2003  # Seed Rate Control
+    - object_id: 2004  # Population Control
+    - object_id: 2005  # Planting Depth
+    - object_id: 2006  # Vacuum Pressure
+    - object_id: 2007  # Ground Speed
+    - object_id: 2008  # Total Area Planted
+
+# Planter Status Header
+OUTPUT_STRING:
+  object_id: 2001
+  x: 200
+  y: 20
+  text: "24-Row Planter Control"
+  font_attributes: 2010
+  color: 255  # White
+
+# Section Control Grid Container
+CONTAINER:
+  object_id: 2002
+  x: 50
+  y: 60
+  width: 500
+  height: 120
+  children:
+    - object_id: 2002a  # Section 1-8
+    - object_id: 2002b  # Section 9-16
+    - object_id: 2002c  # Section 17-24
+
+# Section Control Row 1 (Sections 1-8)
+CONTAINER:
+  object_id: 2002a
+  x: 0
+  y: 0
+  width: 500
+  height: 40
+  children:
+    - object_id: 2010  # Section 1
+    - object_id: 2011  # Section 2
+    - object_id: 2012  # Section 3
+    - object_id: 2013  # Section 4
+    - object_id: 2014  # Section 5
+    - object_id: 2015  # Section 6
+    - object_id: 2016  # Section 7
+    - object_id: 2017  # Section 8
+
+# Section 1 Button
+BUTTON:
+  object_id: 2010
+  x: 0
+  y: 0
+  width: 60
+  height: 35
+  key_code: 10
+  background_color: 85  # Green (Active)
+  border_color: 255
+
+# Section 1 Label
+OUTPUT_STRING:
+  object_id: 2010a
+  x: 25
+  y: 17
+  text: "1"
+  font_attributes: 2011
+  color: 0  # Black
+
+# Section 2 Button
+BUTTON:
+  object_id: 2011
+  x: 62
+  y: 0
+  width: 60
+  height: 35
+  key_code: 11
+  background_color: 85  # Green (Active)
+  border_color: 255
+
+# Section 2 Label
+OUTPUT_STRING:
+  object_id: 2011a
+  x: 87
+  y: 17
+  text: "2"
+  font_attributes: 2011
+  color: 0  # Black
+
+# Section 3 Button
+BUTTON:
+  object_id: 2012
+  x: 124
+  y: 0
+  width: 60
+  height: 35
+  key_code: 12
+  background_color: 85  # Green (Active)
+  border_color: 255
+
+# Section 3 Label
+OUTPUT_STRING:
+  object_id: 2012a
+  x: 149
+  y: 17
+  text: "3"
+  font_attributes: 2011
+  color: 0  # Black
+
+# Section 4 Button
+BUTTON:
+  object_id: 2013
+  x: 186
+  y: 0
+  width: 60
+  height: 35
+  key_code: 13
+  background_color: 208  # Orange (Warning)
+  border_color: 255
+
+# Section 4 Label  
+OUTPUT_STRING:
+  object_id: 2013a
+  x: 211
+  y: 17
+  text: "4"
+  font_attributes: 2011
+  color: 0  # Black
+
+# Section 5-8 (Similar pattern, active)
+BUTTON:
+  object_id: 2014
+  x: 248
+  y: 0
+  width: 60
+  height: 35
+  key_code: 14
+  background_color: 85  # Green
+  border_color: 255
+
+OUTPUT_STRING:
+  object_id: 2014a
+  x: 273
+  y: 17
+  text: "5"
+  font_attributes: 2011
+  color: 0
+
+BUTTON:
+  object_id: 2015
+  x: 310
+  y: 0
+  width: 60
+  height: 35
+  key_code: 15
+  background_color: 85  # Green
+  border_color: 255
+
+OUTPUT_STRING:
+  object_id: 2015a
+  x: 335
+  y: 17
+  text: "6"
+  font_attributes: 2011
+  color: 0
+
+BUTTON:
+  object_id: 2016
+  x: 372
+  y: 0
+  width: 60
+  height: 35
+  key_code: 16
+  background_color: 85  # Green
+  border_color: 255
+
+OUTPUT_STRING:
+  object_id: 2016a
+  x: 397
+  y: 17
+  text: "7"
+  font_attributes: 2011
+  color: 0
+
+BUTTON:
+  object_id: 2017
+  x: 434
+  y: 0
+  width: 60
+  height: 35
+  key_code: 17
+  background_color: 85  # Green
+  border_color: 255
+
+OUTPUT_STRING:
+  object_id: 2017a
+  x: 459
+  y: 17
+  text: "8"
+  font_attributes: 2011
+  color: 0
+
+# Seed Rate Control
+CONTAINER:
+  object_id: 2003
+  x: 50
+  y: 200
+  width: 200
+  height: 80
+  children:
+    - object_id: 2003a  # Label
+    - object_id: 2003b  # Value Display
+    - object_id: 2003c  # Increase Button
+    - object_id: 2003d  # Decrease Button
+
+# Seed Rate Label
+OUTPUT_STRING:
+  object_id: 2003a
+  x: 10
+  y: 10
+  text: "Seed Rate"
+  font_attributes: 2012
+  color: 255
+
+# Seed Rate Value
+OUTPUT_NUMBER:
+  object_id: 2003b
+  x: 10
+  y: 30
+  width: 80
+  height: 25
+  value: 32000
+  format: "%.0f seeds/ac"
+  font_attributes: 2011
+  color: 85  # Green
+
+# Increase Button
+BUTTON:
+  object_id: 2003c
+  x: 100
+  y: 30
+  width: 40
+  height: 25
+  key_code: 31
+  background_color: 170  # Blue
+  border_color: 255
+
+OUTPUT_STRING:
+  object_id: 2003c_label
+  x: 115
+  y: 42
+  text: "+"
+  font_attributes: 2013
+  color: 255
+
+# Decrease Button
+BUTTON:
+  object_id: 2003d
+  x: 150
+  y: 30
+  width: 40
+  height: 25
+  key_code: 32
+  background_color: 170  # Blue
+  border_color: 255
+
+OUTPUT_STRING:
+  object_id: 2003d_label
+  x: 167
+  y: 42
+  text: "-"
+  font_attributes: 2013
+  color: 255
+
+# Population Control
+CONTAINER:
+  object_id: 2004
+  x: 280
+  y: 200
+  width: 200
+  height: 80
+  children:
+    - object_id: 2004a  # Label
+    - object_id: 2004b  # Value Display
+    - object_id: 2004c  # Target Population
+
+# Population Label
+OUTPUT_STRING:
+  object_id: 2004a
+  x: 10
+  y: 10
+  text: "Population"
+  font_attributes: 2012
+  color: 255
+
+# Current Population
+OUTPUT_NUMBER:
+  object_id: 2004b
+  x: 10
+  y: 30
+  width: 80
+  height: 25
+  value: 31850
+  format: "%.0f plants/ac"
+  font_attributes: 2011
+  color: 85  # Green
+
+# Target Population
+OUTPUT_STRING:
+  object_id: 2004c
+  x: 10
+  y: 55
+  text: "Target: 32000"
+  font_attributes: 2014
+  color: 255
+
+# Planting Depth Control
+CONTAINER:
+  object_id: 2005
+  x: 50
+  y: 300
+  width: 150
+  height: 60
+  children:
+    - object_id: 2005a  # Label
+    - object_id: 2005b  # Depth Display
+
+# Depth Label
+OUTPUT_STRING:
+  object_id: 2005a
+  x: 10
+  y: 10
+  text: "Planting Depth"
+  font_attributes: 2012
+  color: 255
+
+# Depth Value
+OUTPUT_NUMBER:
+  object_id: 2005b
+  x: 10
+  y: 30
+  width: 80
+  height: 25
+  value: 2.1
+  format: "%.1f inches"
+  font_attributes: 2011
+  color: 85  # Green
+
+# Vacuum Pressure
+CONTAINER:
+  object_id: 2006
+  x: 220
+  y: 300
+  width: 150
+  height: 60
+  children:
+    - object_id: 2006a  # Label
+    - object_id: 2006b  # Pressure Display
+
+# Vacuum Label
+OUTPUT_STRING:
+  object_id: 2006a
+  x: 10
+  y: 10
+  text: "Vacuum Pressure"
+  font_attributes: 2012
+  color: 255
+
+# Pressure Value
+OUTPUT_NUMBER:
+  object_id: 2006b
+  x: 10
+  y: 30
+  width: 80
+  height: 25
+  value: 12.5
+  format: "%.1f inHg"
+  font_attributes: 2011
+  color: 85  # Green
+
+# Ground Speed
+CONTAINER:
+  object_id: 2007
+  x: 390
+  y: 300
+  width: 150
+  height: 60
+  children:
+    - object_id: 2007a  # Label
+    - object_id: 2007b  # Speed Display
+
+# Speed Label
+OUTPUT_STRING:
+  object_id: 2007a
+  x: 10
+  y: 10
+  text: "Ground Speed"
+  font_attributes: 2012
+  color: 255
+
+# Speed Value
+OUTPUT_NUMBER:
+  object_id: 2007b
+  x: 10
+  y: 30
+  width: 80
+  height: 25
+  value: 7.2
+  format: "%.1f mph"
+  font_attributes: 2011
+  color: 85  # Green
+
+# Total Area Planted
+CONTAINER:
+  object_id: 2008
+  x: 50
+  y: 380
+  width: 200
+  height: 40
+  children:
+    - object_id: 2008a  # Label
+    - object_id: 2008b  # Area Display
+
+# Area Label
+OUTPUT_STRING:
+  object_id: 2008a
+  x: 10
+  y: 10
+  text: "Area Planted Today:"
+  font_attributes: 2012
+  color: 255
+
+# Area Value
+OUTPUT_NUMBER:
+  object_id: 2008b
+  x: 120
+  y: 10
+  width: 70
+  height: 20
+  value: 127.4
+  format: "%.1f acres"
+  font_attributes: 2011
+  color: 85  # Green
+
+# Soft Key Mask for Planter Control
+SOFT_KEY_MASK:
+  object_id: 3000
+  background_color: 1  # Dark Gray
+  keys:
+    - object_id: 3001  # Back to Dashboard
+    - object_id: 3002  # All Sections On
+    - object_id: 3003  # All Sections Off
+    - object_id: 3004  # Reset Counters
+
+# Soft Key 1 - Back
+KEY:
+  object_id: 3001
+  x: 0
+  y: 0
+  width: 60
+  height: 60
+  key_code: 101
+  background_color: 85   # Green
+  border_color: 255
+
+OUTPUT_STRING:
+  object_id: 3001a
+  x: 15
+  y: 25
+  text: "BACK"
+  font_attributes: 2015
+  color: 0
+
+# Soft Key 2 - All On
+KEY:
+  object_id: 3002
+  x: 60
+  y: 0
+  width: 60
+  height: 60
+  key_code: 102
+  background_color: 85   # Green
+  border_color: 255
+
+OUTPUT_STRING:
+  object_id: 3002a
+  x: 75
+  y: 20
+  text: "ALL"
+  font_attributes: 2015
+  color: 0
+
+OUTPUT_STRING:
+  object_id: 3002b
+  x: 80
+  y: 35
+  text: "ON"
+  font_attributes: 2015
+  color: 0
+
+# Soft Key 3 - All Off
+KEY:
+  object_id: 3003
+  x: 120
+  y: 0
+  width: 60
+  height: 60
+  key_code: 103
+  background_color: 196  # Red
+  border_color: 255
+
+OUTPUT_STRING:
+  object_id: 3003a
+  x: 135
+  y: 20
+  text: "ALL"
+  font_attributes: 2015
+  color: 255
+
+OUTPUT_STRING:
+  object_id: 3003b
+  x: 135
+  y: 35
+  text: "OFF"
+  font_attributes: 2015
+  color: 255
+
+# Soft Key 4 - Reset
+KEY:
+  object_id: 3004
+  x: 180
+  y: 0
+  width: 60
+  height: 60
+  key_code: 104
+  background_color: 208  # Orange
+  border_color: 255
+
+OUTPUT_STRING:
+  object_id: 3004a
+  x: 190
+  y: 25
+  text: "RESET"
+  font_attributes: 2015
+  color: 0
+
+# Font Attributes for Planter Interface
+FONT_ATTRIBUTES:
+  object_id: 2010
+  font_size: 18
+  font_style: 1  # Bold
+  color: 255     # White
+
+FONT_ATTRIBUTES:
+  object_id: 2011
+  font_size: 14
+  font_style: 1  # Bold
+  color: 0       # Black
+
+FONT_ATTRIBUTES:
+  object_id: 2012
+  font_size: 12
+  font_style: 0  # Normal
+  color: 255     # White
+
+FONT_ATTRIBUTES:
+  object_id: 2013
+  font_size: 16
+  font_style: 1  # Bold
+  color: 255     # White
+
+FONT_ATTRIBUTES:
+  object_id: 2014
+  font_size: 10
+  font_style: 0  # Normal
+  color: 170     # Light Blue
+
+FONT_ATTRIBUTES:
+  object_id: 2015
+  font_size: 8
+  font_style: 1  # Bold
+  color: 0       # Black

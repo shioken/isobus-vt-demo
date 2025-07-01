@@ -1,0 +1,38 @@
+# Demo Repository Specific
+
+# Source code is private - only distribute built apps
+demo_app/
+
+# Large binary files (will use Git LFS for some)
+*.ipa
+*.dmg
+*.exe
+*.zip
+
+# Keep APK for distribution
+!demo/apk/*.apk
+
+# Generated screenshots
+/demo/screenshots/generated/
+
+# Temporary files
+*.tmp
+*.log
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Build artifacts
+build/
+dist/
+out/
+
+# Environment files
+.env
+.env.local
+
+# Contact information (will be public)
+# Note: Ensure no private contact details are committed

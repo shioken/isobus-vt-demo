@@ -1,0 +1,338 @@
+# ISO 11783-6 Object Pool for Tractor Dashboard Demo
+# This is a simplified text representation for demo purposes
+# In real implementation, this would be binary IOP format
+
+OBJECT_POOL_VERSION: 1.0
+DESIGNER_VERSION: 1.0
+LANGUAGE: en
+
+# Working Set (Root Container)
+WORKING_SET:
+  object_id: 0
+  active_mask: 1000
+  background_color: 0  # Black
+  selectable: false
+  language_mask:
+    - language: "en"
+      mask_id: 1000
+
+# Main Dashboard Data Mask
+DATA_MASK:
+  object_id: 1000
+  background_color: 0  # Black
+  soft_key_mask: 2000
+  children:
+    - object_id: 1001  # Speed Display
+    - object_id: 1002  # Engine RPM Display
+    - object_id: 1003  # Fuel Level Meter
+    - object_id: 1004  # Hydraulic Temperature
+    - object_id: 1005  # Warning Lights Container
+    - object_id: 1006  # Implement Status
+    - object_id: 1007  # GPS Information
+
+# Speed Display (Output Number)
+OUTPUT_NUMBER:
+  object_id: 1001
+  x: 50
+  y: 50
+  width: 120
+  height: 40
+  value: 25
+  min_value: 0
+  max_value: 50
+  format: "%.1f km/h"
+  font_attributes: 1010
+  color: 255  # White
+
+# Engine RPM Display (Output Number) 
+OUTPUT_NUMBER:
+  object_id: 1002
+  x: 200
+  y: 50
+  width: 120
+  height: 40
+  value: 1850
+  min_value: 0
+  max_value: 3000
+  format: "%.0f RPM"
+  font_attributes: 1010
+  color: 255  # White
+
+# Fuel Level Meter (Linear Bar Graph)
+LINEAR_BAR_GRAPH:
+  object_id: 1003
+  x: 50
+  y: 120
+  width: 200
+  height: 30
+  value: 75
+  min_value: 0
+  max_value: 100
+  bar_color: 85   # Green
+  background_color: 1  # Dark Gray
+  border_color: 255    # White
+
+# Fuel Level Label
+OUTPUT_STRING:
+  object_id: 1003a
+  x: 50
+  y: 100
+  text: "Fuel Level"
+  font_attributes: 1011
+  color: 255
+
+# Hydraulic Temperature (Meter)
+METER:
+  object_id: 1004
+  x: 300
+  y: 120
+  width: 80
+  height: 80
+  value: 65
+  min_value: 0
+  max_value: 120
+  start_angle: 225
+  end_angle: 315
+  needle_color: 255    # White
+  border_color: 255    # White
+  background_color: 0  # Black
+
+# Hydraulic Temp Label
+OUTPUT_STRING:
+  object_id: 1004a
+  x: 300
+  y: 100
+  text: "Hydraulic °C"
+  font_attributes: 1011
+  color: 255
+
+# Warning Lights Container
+CONTAINER:
+  object_id: 1005
+  x: 50
+  y: 220
+  width: 300
+  height: 60
+  children:
+    - object_id: 1005a  # Engine Warning
+    - object_id: 1005b  # Hydraulic Warning
+    - object_id: 1005c  # Fuel Warning
+
+# Engine Warning Light
+OUTPUT_ELLIPSE:
+  object_id: 1005a
+  x: 10
+  y: 10
+  width: 20
+  height: 20
+  fill_color: 0    # Off (Black)
+  border_color: 85 # Green
+
+# Hydraulic Warning Light  
+OUTPUT_ELLIPSE:
+  object_id: 1005b
+  x: 40
+  y: 10
+  width: 20
+  height: 20
+  fill_color: 0    # Off (Black)
+  border_color: 85 # Green
+
+# Fuel Warning Light
+OUTPUT_ELLIPSE:
+  object_id: 1005c
+  x: 70
+  y: 10
+  width: 20
+  height: 20
+  fill_color: 208  # Orange (Warning)
+  border_color: 208
+
+# Implement Status Container
+CONTAINER:
+  object_id: 1006
+  x: 400
+  y: 50
+  width: 180
+  height: 150
+  children:
+    - object_id: 1006a  # Implement Connected
+    - object_id: 1006b  # Work State
+    - object_id: 1006c  # Section Control
+
+# Implement Status Text
+OUTPUT_STRING:
+  object_id: 1006a
+  x: 10
+  y: 10
+  text: "Planter Connected"
+  font_attributes: 1011
+  color: 85  # Green
+
+# Work State Display
+OUTPUT_STRING:
+  object_id: 1006b
+  x: 10
+  y: 40
+  text: "Working"
+  font_attributes: 1012
+  color: 85  # Green
+
+# Section Control Status
+OUTPUT_STRING:
+  object_id: 1006c
+  x: 10
+  y: 70
+  text: "Sections: 8/8 Active"
+  font_attributes: 1011
+  color: 255
+
+# GPS Information Container
+CONTAINER:
+  object_id: 1007
+  x: 400
+  y: 220
+  width: 180
+  height: 80
+  children:
+    - object_id: 1007a  # GPS Status
+    - object_id: 1007b  # Coordinate Display
+
+# GPS Status
+OUTPUT_STRING:
+  object_id: 1007a
+  x: 10
+  y: 10
+  text: "GPS: RTK Fixed"
+  font_attributes: 1011
+  color: 85  # Green
+
+# Coordinate Display
+OUTPUT_STRING:
+  object_id: 1007b
+  x: 10
+  y: 40
+  text: "40.7128°N 74.0060°W"
+  font_attributes: 1013
+  color: 255
+
+# Soft Key Mask
+SOFT_KEY_MASK:
+  object_id: 2000
+  background_color: 1  # Dark Gray
+  keys:
+    - object_id: 2001
+    - object_id: 2002
+    - object_id: 2003
+    - object_id: 2004
+
+# Soft Key 1 - Home
+KEY:
+  object_id: 2001
+  x: 0
+  y: 0
+  width: 60
+  height: 60
+  key_code: 1
+  background_color: 85  # Green
+  border_color: 255     # White
+
+# Soft Key 1 Label
+OUTPUT_STRING:
+  object_id: 2001a
+  x: 15
+  y: 25
+  text: "HOME"
+  font_attributes: 1014
+  color: 0  # Black
+
+# Soft Key 2 - Settings
+KEY:
+  object_id: 2002
+  x: 60
+  y: 0
+  width: 60
+  height: 60
+  key_code: 2
+  background_color: 170  # Blue
+  border_color: 255      # White
+
+# Soft Key 2 Label
+OUTPUT_STRING:
+  object_id: 2002a
+  x: 75
+  y: 25
+  text: "SET"
+  font_attributes: 1014
+  color: 0  # Black
+
+# Soft Key 3 - Implement
+KEY:
+  object_id: 2003
+  x: 120
+  y: 0
+  width: 60
+  height: 60
+  key_code: 3
+  background_color: 208  # Orange
+  border_color: 255      # White
+
+# Soft Key 3 Label
+OUTPUT_STRING:
+  object_id: 2003a
+  x: 135
+  y: 25
+  text: "IMPL"
+  font_attributes: 1014
+  color: 0  # Black
+
+# Soft Key 4 - Info
+KEY:
+  object_id: 2004
+  x: 180
+  y: 0
+  width: 60
+  height: 60
+  key_code: 4
+  background_color: 255  # White
+  border_color: 0        # Black
+
+# Soft Key 4 Label
+OUTPUT_STRING:
+  object_id: 2004a
+  x: 195
+  y: 25
+  text: "INFO"
+  font_attributes: 1014
+  color: 0  # Black
+
+# Font Attributes
+FONT_ATTRIBUTES:
+  object_id: 1010
+  font_size: 16
+  font_style: 0  # Normal
+  color: 255     # White
+
+FONT_ATTRIBUTES:
+  object_id: 1011
+  font_size: 12
+  font_style: 0  # Normal
+  color: 255     # White
+
+FONT_ATTRIBUTES:
+  object_id: 1012
+  font_size: 14
+  font_style: 1  # Bold
+  color: 85      # Green
+
+FONT_ATTRIBUTES:
+  object_id: 1013
+  font_size: 10
+  font_style: 0  # Normal
+  color: 255     # White
+
+FONT_ATTRIBUTES:
+  object_id: 1014
+  font_size: 8
+  font_style: 1  # Bold
+  color: 0       # Black
