@@ -88,8 +88,6 @@ Complete ISO 11783-6 VT object demonstration:
 
 ## 🏗️ Architecture
 
-![Architecture Diagram](./assets/architecture/vt-library-architecture.png)
-
 The library follows a **modular, type-safe architecture**:
 
 - **Core Engine** - Object pool parsing, validation, state management
