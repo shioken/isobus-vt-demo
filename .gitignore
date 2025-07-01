@@ -2,6 +2,7 @@
 
 # Source code is private - only distribute built apps
 demo_app/
+demo_app_v2/
 
 # Large binary files (will use Git LFS for some)
 *.ipa

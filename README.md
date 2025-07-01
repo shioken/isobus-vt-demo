@@ -2,7 +2,7 @@
 
 **Professional Flutter Widget Library for Agricultural Vehicle Terminals**
 
-[🌐 **Live Web Demo**](https://your-demo-site.github.io/iso11783_6_vt_demo) | [📱 **Android APK**](./demo/apk/iso11783_vt_demo.apk) | [📞 **Commercial Inquiry**](./contact/business_inquiry.md)
+[🌐 **Live Web Demo**](./demo/web_tractor_dashboard/index.html) | [📱 **Tractor Dashboard APK**](./demo/apk/tractor_dashboard_demo.apk) | [📱 **VT Objects APK**](./demo/apk/iso11783_vt_demo.apk) | [📞 **Commercial Inquiry**](./contact/business_inquiry.md)
 
 ---
 
@@ -34,23 +34,55 @@ This demo showcases a **commercial-grade Flutter library** implementing the **IS
 | **Testing** | 73 automated tests (100% pass rate) |
 | **Documentation** | Complete API documentation |
 
-## 🎮 Interactive Demo
+## 🎮 Interactive Demos
 
-### Web Demo
-Experience the VT interface directly in your browser:
-- **[Live Demo](https://your-demo-site.github.io/iso11783-6-vt-demo)** - Try all VT objects and interactions
-- Responsive design for desktop and mobile
-- Real-time object pool parsing
+### 🚜 Tractor Dashboard Demo (NEW!)
+**Professional Agricultural Interface Recreation**
+
+Experience a pixel-perfect recreation of real tractor dashboard interfaces:
+
+- **[🌐 Live Web Demo](./demo/web_tractor_dashboard/index.html)** - Try it in your browser
+- **[📱 Download APK](./demo/apk/tractor_dashboard_demo.apk)** (18.9 MB)
+- **[📄 Demo Details](./demo/apk/tractor_dashboard_download.html)** - Features and screenshots
+
+**Features:**
+- Real-time engine RPM, speed, fuel, and hydraulic pressure monitoring
+- Interactive PTO, lights, and brake controls
+- Professional landscape tablet interface
+- Authentic agricultural equipment styling
+- F1-F6 function keys with proper labeling
+
+![Tractor Dashboard](./demo/screenshots/tractor_dashboard_screenshot.png)
+
+### 📋 VT Objects Library Demo
+Complete ISO 11783-6 VT object demonstration:
+- **[📱 Download APK](./demo/apk/iso11783_vt_demo.apk)** (5.2 MB)
+- All 29 VT object types implemented
 - Interactive soft key navigation
-
-### Mobile Demo
-Download and install the Android APK:
-- **[Download APK](./demo/apk/iso11783-6-vt-demo.apk)** (5.2 MB)
-- Supports Android 6.0+ (API 23+)
-- Demonstrates realistic tractor dashboard scenarios
+- Real-time object pool parsing
 - Touch-optimized interface
 
+## 🚀 Quick Start
+
+### Web Demo
+1. **Tractor Dashboard**: Open `demo/web_tractor_dashboard/index.html` in your browser
+2. **VT Objects**: Open `demo/web/index.html` in your browser
+
+### Android APK
+1. Download APK from the links above
+2. Enable "Install unknown apps" on your Android device
+3. Install and launch the app
+4. **Requirements**: Android 6.0+ (API 23+)
+
 ## 🖼️ Screenshots
+
+### Tractor Dashboard Demo
+![Tractor Dashboard Screenshot](./demo/screenshots/tractor_dashboard_screenshot.png)
+*Live screenshot from Android device showing professional agricultural interface*
+
+### VT Objects Library
+![VT Objects Web Menu](./demo/screenshots/vt_objects_web_menu.png)
+*VT Objects Library Web demo main menu - showcasing all 29 ISO 11783-6 object types*
 
 | Data Mask Interface | Soft Key Navigation | Object Properties |
 |:-------------------:|:-------------------:|:-----------------:|
@@ -113,6 +145,7 @@ This is a **commercial library** available for licensing to agricultural equipme
 
 ## 📚 Documentation
 
+- [🎮 **Demo Guide**](./demo/DEMO_GUIDE.md) - Complete demo walkthrough and usage instructions
 - [📖 **Technical Overview**](./docs/technical-overview.md) - Detailed specifications
 - [🛠️ **Integration Guide**](./docs/integration-guide.md) - How to implement
 - [✅ **ISO Compliance**](./docs/iso-compliance.md) - Certification details

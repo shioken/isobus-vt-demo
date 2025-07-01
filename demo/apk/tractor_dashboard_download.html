@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tractor Dashboard Demo Download - ISO 11783-6 VT</title>
+    <meta name="description" content="Download the Tractor Dashboard Demo APK - ISO 11783-6 Virtual Terminal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .download-section {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .download-button {
+            display: inline-block;
+            padding: 20px 40px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .download-button:hover {
+            background: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .demo-preview {
+            background: rgba(0,0,0,0.3);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid rgba(76,175,80,0.5);
+        }
+        
+        .spec-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .web-demo-link {
+            background: #2196F3;
+            margin-left: 20px;
+        }
+        
+        .web-demo-link:hover {
+            background: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚜 Tractor Dashboard Demo</h1>
+        <p class="subtitle">Experience the professional ISO 11783-6 Virtual Terminal interface</p>
+        
+        <div class="demo-preview">
+            <h2>🎮 Interactive Dashboard Experience</h2>
+            <p>This demo recreates the professional tractor dashboard interface shown in agricultural equipment. 
+            Experience real-time data updates, interactive controls, and the authentic look and feel of ISO 11783-6 compliant VT interfaces.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="../screenshots/tractor_dashboard_screenshot.png" 
+                     alt="Tractor Dashboard Demo Screenshot" 
+                     style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">📱 Live screenshot from Android device</p>
+            </div>
+            
+            <div style="background: rgba(76,175,80,0.2); border: 2px solid #4CAF50; border-radius: 10px; padding: 20px; margin: 20px 0;">
+                <h3>✅ Perfect Match</h3>
+                <p>This app recreates the exact interface from the reference design, including:</p>
+                <p>• Landscape orientation optimized for tablets<br>
+                • Circular gauges for Engine RPM and Fuel Level<br>
+                • Central speed display with large numbers<br>
+                • Hydraulic pressure bar with temperature<br>
+                • Interactive PTO, LIGHTS, and BRAKE controls<br>
+                • Function keys (F1-F6) with proper labeling</p>
+            </div>
+            
+            <a href="tractor_dashboard_demo.apk" class="download-button" download="tractor_dashboard_demo.apk">
+                📱 Download APK (18.9MB)
+            </a>
+            
+            <a href="../web_tractor_dashboard/index.html" class="download-button web-demo-link" target="_blank">
+                🌐 Try Web Demo
+            </a>
+        </div>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Real-time Updates</h3>
+                <p>Live data simulation with Engine RPM, Speed, Fuel Level, Hydraulic Pressure, and Temperature values updating every 3 seconds.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Authentic Interface</h3>
+                <p>Pixel-perfect recreation of professional agricultural equipment interfaces with proper colors, fonts, and layout.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Touch Optimized</h3>
+                <p>Interactive controls for PTO, LIGHTS, BRAKE systems plus function keys for menu navigation.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Professional Quality</h3>
+                <p>Production-ready code demonstrating ISO 11783-6 VT implementation capabilities.</p>
+            </div>
+        </div>
+        
+        <div class="download-section">
+            <h3>📋 Technical Specifications</h3>
+            
+            <div class="spec-table">
+                <div class="spec-row">
+                    <span><strong>App Size:</strong></span>
+                    <span>18.9 MB</span>
+                </div>
+                <div class="spec-row">
+                    <span><strong>Android Version:</strong></span>
+                    <span>6.0+ (API 23)</span>
+                </div>
+                <div class="spec-row">
+                    <span><strong>Orientation:</strong></span>
+                    <span>Landscape (Fixed)</span>
+                </div>
+                <div class="spec-row">
+                    <span><strong>Screen Size:</strong></span>
+                    <span>Optimized for 7"+ tablets</span>
+                </div>
+                <div class="spec-row">
+                    <span><strong>Framework:</strong></span>
+                    <span>Flutter 3.24+</span>
+                </div>
+                <div class="spec-row">
+                    <span><strong>ISO Standard:</strong></span>
+                    <span>11783-6 Virtual Terminal</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="download-section">
+            <h3>🎬 Features Demonstrated</h3>
+            <div style="text-align: left; margin: 20px 0;">
+                <h4>Dashboard Elements:</h4>
+                <ul>
+                    <li><strong>Engine RPM Gauge:</strong> Circular progress indicator (0-3000 RPM)</li>
+                    <li><strong>Ground Speed:</strong> Large numeric display with km/h units</li>
+                    <li><strong>Fuel Level:</strong> Circular gauge with percentage display</li>
+                    <li><strong>Hydraulic Pressure:</strong> Linear bar with pressure and temperature</li>
+                    <li><strong>Status Bar:</strong> Time display and GPS status indicator</li>
+                </ul>
+                
+                <h4>Interactive Controls:</h4>
+                <ul>
+                    <li><strong>PTO Control:</strong> Power Take-Off system toggle</li>
+                    <li><strong>Lights Control:</strong> Vehicle lighting system</li>
+                    <li><strong>Brake Control:</strong> Brake system engagement</li>
+                    <li><strong>Function Keys:</strong> F1-F6 with MENU, HYD, PTO, LIGHTS, SET, INFO</li>
+                </ul>
+                
+                <h4>Data Panel:</h4>
+                <ul>
+                    <li>Real-time value display with color-coded indicators</li>
+                    <li>Feature list highlighting VT library capabilities</li>
+                    <li>Professional agricultural equipment styling</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="download-section">
+            <h3>💼 Commercial Implementation</h3>
+            <p>This demo showcases the capabilities of our ISO 11783-6 Virtual Terminal Flutter library.</p>
+            <p>For commercial licensing, custom development, or integration support:</p>
+            
+            <a href="../../contact/business_inquiry.md" class="download-button">
+                💼 Commercial Licensing
+            </a>
+            <a href="../../docs/technical_overview.md" class="download-button" style="background: #FF9800;">
+                📖 Technical Documentation
+            </a>
+        </div>
+        
+        <footer style="margin-top: 60px; opacity: 0.7;">
+            <p>© 2024 Agricultural Technology Solutions Inc.</p>
+            <p>Professional ISO 11783-6 VT solutions for the farming industry</p>
+        </footer>
+    </div>
+</body>
+</html>
