@@ -2,7 +2,7 @@
 
 **Professional Flutter Widget Library for Agricultural Vehicle Terminals**
 
-[🌐 **Live Web Demo**](./demo/web_tractor_dashboard/index.html) | [📱 **Tractor Dashboard APK**](./demo/apk/tractor_dashboard_demo.apk) | [📱 **VT Objects APK**](./demo/apk/iso11783_vt_demo.apk) | [📞 **Commercial Inquiry**](./contact/business_inquiry.md)
+[🌐 **Live Web Demo**](https://shioken.github.io/isobus-vt-demo/demo/web_tractor_dashboard/) | [📋 **VT Objects Demo**](https://shioken.github.io/isobus-vt-demo/demo/web/) | [📱 **Download APKs**](https://shioken.github.io/isobus-vt-demo/demo/apk/) | [📞 **Commercial Inquiry**](./contact/business_inquiry.md)
 
 ---
 
@@ -41,7 +41,7 @@ This demo showcases a **commercial-grade Flutter library** implementing the **IS
 
 Experience a pixel-perfect recreation of real tractor dashboard interfaces:
 
-- **[🌐 Live Web Demo](./demo/web_tractor_dashboard/index.html)** - Try it in your browser
+- **[🌐 Live Web Demo](https://shioken.github.io/isobus-vt-demo/demo/web_tractor_dashboard/)** - Try it in your browser
 - **[📱 Download APK](./demo/apk/tractor_dashboard_demo.apk)** (18.9 MB)
 - **[📄 Demo Details](./demo/apk/tractor_dashboard_download.html)** - Features and screenshots
 
@@ -56,6 +56,7 @@ Experience a pixel-perfect recreation of real tractor dashboard interfaces:
 
 ### 📋 VT Objects Library Demo
 Complete ISO 11783-6 VT object demonstration:
+- **[🌐 Live Web Demo](https://shioken.github.io/isobus-vt-demo/demo/web/)** - Try all 29 VT objects
 - **[📱 Download APK](./demo/apk/iso11783_vt_demo.apk)** (5.2 MB)
 - All 29 VT object types implemented
 - Interactive soft key navigation
@@ -65,8 +66,8 @@ Complete ISO 11783-6 VT object demonstration:
 ## 🚀 Quick Start
 
 ### Web Demo
-1. **Tractor Dashboard**: Open `demo/web_tractor_dashboard/index.html` in your browser
-2. **VT Objects**: Open `demo/web/index.html` in your browser
+1. **[🚜 Tractor Dashboard](https://shioken.github.io/isobus-vt-demo/demo/web_tractor_dashboard/)** - Professional agricultural interface
+2. **[📋 VT Objects](https://shioken.github.io/isobus-vt-demo/demo/web/)** - All 29 ISO VT object types
 
 ### Android APK
 1. Download APK from the links above
