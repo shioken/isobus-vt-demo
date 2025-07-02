@@ -35,5 +35,8 @@ out/
 .env
 .env.local
 
+# Claude Code configuration
+.claude/
+
 # Contact information (will be public)
 # Note: Ensure no private contact details are committed
