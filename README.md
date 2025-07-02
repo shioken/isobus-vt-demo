@@ -2,7 +2,7 @@
 
 **Professional Flutter Widget Library for Agricultural Vehicle Terminals**
 
-[🌐 **Live Web Demo**](https://shioken.github.io/isobus-vt-demo/demo/web_tractor_dashboard/) | [📋 **VT Objects Demo**](https://shioken.github.io/isobus-vt-demo/demo/web/) | [📱 **Download APKs**](https://shioken.github.io/isobus-vt-demo/demo/apk/) | [📞 **Commercial Inquiry**](./contact/business_inquiry.md)
+[🚜 **Tractor Dashboard Demo**](https://shioken.github.io/isobus-vt-demo/demo/web_tractor_dashboard/) | [📋 **VT Objects Demo**](https://shioken.github.io/isobus-vt-demo/demo/web/) | [📱 **Download APKs**](https://shioken.github.io/isobus-vt-demo/demo/apk/) | [📞 **Commercial Inquiry**](./contact/business_inquiry.md)
 
 ---
 
