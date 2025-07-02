@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="ISO 11783-6 Virtual Terminal Polygon Demo - Working Implementation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ISO 11783-6 VT Polygon Demo - Working Implementation</title>
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.5em;
+      font-weight: 300;
+    }
+    
+    .header p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 1.1em;
+    }
+    
+    .demo-section {
+      padding: 40px;
+    }
+    
+    .status-card {
+      background: #f8f9fa;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .status-icon {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+    
+    .working {
+      border-color: #28a745;
+      background: #d4edda;
+    }
+    
+    .working .status-icon {
+      color: #28a745;
+    }
+    
+    .issue {
+      border-color: #ffc107;
+      background: #fff3cd;
+    }
+    
+    .issue .status-icon {
+      color: #ffc107;
+    }
+    
+    .demo-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .demo-link {
+      display: block;
+      padding: 20px;
+      background: white;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    
+    .demo-link:hover {
+      border-color: #007bff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,123,255,0.15);
+    }
+    
+    .demo-link h3 {
+      margin: 0 0 10px 0;
+      color: #007bff;
+    }
+    
+    .demo-link p {
+      margin: 0;
+      color: #6c757d;
+    }
+    
+    .code-section {
+      background: #f8f9fa;
+      padding: 30px;
+      border-top: 1px solid #e9ecef;
+    }
+    
+    .code-block {
+      background: #2d3748;
+      color: #e2e8f0;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Monaco', 'Consolas', monospace;
+      font-size: 14px;
+      overflow-x: auto;
+    }
+    
+    .highlight {
+      background: #4a5568;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔷 ISO 11783-6 VT Polygon Demo</h1>
+      <p>Working Implementation Status & Solutions</p>
+    </div>
+    
+    <div class="demo-section">
+      <div class="status-card issue">
+        <div class="status-icon">⚠️</div>
+        <h2>Current VT Objects Showcase Issue</h2>
+        <p>The VT Objects Showcase demo has a missing implementation for Polygon rendering. 
+        The Polygon object appears in the menu but shows a placeholder message instead of actual geometric shapes.</p>
+      </div>
+      
+      <div class="status-card working">
+        <div class="status-icon">✅</div>
+        <h2>Working Polygon Implementation Available</h2>
+        <p>The actual ISO 11783-6 VT library has a fully functional VTPolygonWidget that renders 
+        complex geometric shapes including triangles, squares, pentagons, hexagons, stars, and custom polygons.</p>
+      </div>
+      
+      <h2>🎯 Access Working Polygon Demos</h2>
+      <div class="demo-links">
+        <a href="../../iso11783_6_vt/example/build/web/index.html" class="demo-link">
+          <h3>🔷 Complete Polygon Test Suite</h3>
+          <p>Full polygon rendering test with 8 different geometric shapes including triangles, stars, and complex forms.</p>
+        </a>
+        
+        <a href="../../iso11783_6_vt/example/web/polygon_test.html" class="demo-link">
+          <h3>📐 Polygon Geometry Demo</h3>
+          <p>Interactive demonstration of polygon point arrays, fill patterns, and vector graphics rendering.</p>
+        </a>
+        
+        <a href="index_local.html" class="demo-link">
+          <h3>📋 VT Objects Showcase (Limited)</h3>
+          <p>Current demo with known Polygon limitation. Use for other VT object demonstrations.</p>
+        </a>
+      </div>
+      
+      <h2>🔧 Technical Details</h2>
+      <p>The issue is located in the compiled JavaScript where the Polygon case is missing from the object rendering switch statement:</p>
+      
+      <div class="code-block">
+        <div style="color: #68d391;">// ✅ Working Implementation (in actual library)</div>
+        case vt.Polygon:
+          return VTPolygonWidget(
+            polygon: vtObject as vt.Polygon,
+          );
+        
+        <div style="color: #fc8181;">// ❌ Missing in Demo (compiled JS)</div>
+        case"Linear Bar Graph":return this.ZL()
+        case"Meter":return B.Bg  
+        case"Picture Graphic":return B.Bk
+        <span class="highlight">// Missing: case"Polygon":return this.ZP()</span>
+        default:return "Interactive Polygon demo would be displayed here"
+      </div>
+    </div>
+    
+    <div class="code-section">
+      <h2>🚀 For Developers</h2>
+      <p>To build a working Polygon demo from the source library:</p>
+      <div class="code-block">
+cd ../iso11783_6_vt/example
+flutter build web --web-renderer canvaskit --target=lib/polygon_test_main.dart
+flutter run -d chrome --target=lib/polygon_test_main.dart
+      </div>
+      
+      <p style="margin-top: 20px;"><strong>Note:</strong> The VT Objects Showcase is a compiled demo without source code access. 
+      For complete Polygon functionality, use the actual ISO 11783-6 VT library implementation.</p>
+    </div>
+  </div>
+</body>
+</html>

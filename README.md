@@ -56,9 +56,10 @@ Experience a pixel-perfect recreation of real tractor dashboard interfaces:
 
 ### 📋 VT Objects Library Demo
 Complete ISO 11783-6 VT object demonstration:
-- **[🌐 Live Web Demo](https://shioken.github.io/isobus-vt-demo/demo/web/)** - Try all 29 VT objects
+- **[🌐 Live Web Demo](https://shioken.github.io/isobus-vt-demo/demo/web/)** - Try VT objects showcase
+- **[🔷 Polygon Status Page](https://shioken.github.io/isobus-vt-demo/demo/polygon_working_demo.html)** - Polygon implementation info
 - **[📱 Download APK](./demo/apk/iso11783_vt_demo.apk)** (5.2 MB)
-- All 29 VT object types implemented
+- 29 VT object types supported (Polygon: see status page)
 - Interactive soft key navigation
 - Real-time object pool parsing
 - Touch-optimized interface
